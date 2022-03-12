@@ -6,8 +6,8 @@ const Index = ({ logs }) => {
   return (
     <div className="logs-container">
       <h1>Logs</h1>
-      
     </div>
   );
 };
 
+export default Index;
