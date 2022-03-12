@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
-const { Schema } = mongoose;
+//const { Schema } = mongoose;
+
+const Schema = mongoose.Schema;
 
 const requiredNumber = {
   type: Number,
@@ -32,6 +34,6 @@ const logEntrySchema = new Schema(
   }
 );
 
-const LogEntry = mongoose.model("LogEntry", logEntrySchema);
-
-module.exports = LogEntry;
+//const LogEntry = mongoose.model("LogEntry", logEntrySchema);
+module.exports =
+  mongoose.models.LogEntry || mongoose.model("LogEntry", UserSchema);
