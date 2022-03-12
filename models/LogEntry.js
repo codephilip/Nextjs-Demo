@@ -1,14 +1,11 @@
 const mongoose = require("mongoose");
-//const { Schema } = mongoose;
-
-const Schema = mongoose.Schema;
 
 const requiredNumber = {
   type: Number,
   required: true,
 };
 
-const LogEntry = new Schema(
+const LogSchema = new mongoose.Schema(
   {
     title: {
       type: String,
@@ -34,6 +31,4 @@ const LogEntry = new Schema(
   }
 );
 
-//const LogEntry = mongoose.model("LogEntry", logEntrySchema);
-module.exports =
-  mongoose.models.LogEntry || mongoose.model("LogEntry", LogEntry);
+module.exports = mongoose.models.Log || mongoose.model("Log", LogSchema);
