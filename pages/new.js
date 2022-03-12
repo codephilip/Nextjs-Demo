@@ -4,7 +4,7 @@ import fetch from "isomorphic-unfetch";
 import { Button, Form, Loader } from "semantic-ui-react";
 import { useRouter } from "next/router";
 
-const NewNote = () => {
+const NewLog = () => {
   const [form, setForm] = useState({ title: "", description: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState({});
@@ -13,14 +13,14 @@ const NewNote = () => {
   useEffect(() => {
     if (isSubmitting) {
       if (Object.keys(errors).length === 0) {
-        createNote();
+        createLog();
       } else {
         setIsSubmitting(false);
       }
     }
   });
 
-  const createNote = async () => {
+  const createLog = async () => {
     try {
       const res = await fetch("http://localhost:3000/api/crud", {
         method: "POST",
@@ -65,7 +65,7 @@ const NewNote = () => {
 
   return (
     <div className="form-container">
-      <h1>Create Note</h1>
+      <h1>Create Log</h1>
       <div>
         {isSubmitting ? (
           <Loader active inline="centered" />
@@ -103,4 +103,4 @@ const NewNote = () => {
   );
 };
 
-export default NewNote;
+export default NewLog;

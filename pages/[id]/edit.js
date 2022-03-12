@@ -21,7 +21,7 @@ const EditLog = ({ log }) => {
         setIsSubmitting(false);
       }
     }
-  }, [errors]);
+  });
 
   const updateLog = async () => {
     try {
