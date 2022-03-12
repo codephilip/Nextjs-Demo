@@ -1,5 +1,5 @@
 import dbConnect from "../../../utils/dbConnect";
-import logEntrySchema from "../../../models/logEntrySchema";
+import LogEntry from "../../../models/LogEntry";
 
 dbConnect();
 
@@ -9,7 +9,7 @@ export default async (req, res) => {
   switch (method) {
     case "GET":
       try {
-        const los = await logEntrySchema.find({});
+        const log = await LogEntry.find({});
 
         res.status(200).json({ success: true, data: logs });
       } catch (error) {
@@ -18,7 +18,7 @@ export default async (req, res) => {
       break;
     case "POST":
       try {
-        const log = await logEntrySchema.create(req.body);
+        const log = await LogEntry.create(req.body);
 
         res.status(201).json({ success: true, data: log });
       } catch (error) {
