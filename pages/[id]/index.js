@@ -1,5 +1,5 @@
-import dbConnect from "../../../utils/dbConnect";
-import LogEntry from "../../../models/LogEntry";
+import dbConnect from "../../utils/dbConnect";
+import LogEntry from "../../models/LogEntry";
 
 dbConnect();
 
