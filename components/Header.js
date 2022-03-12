@@ -37,13 +37,13 @@ const Header = () => {
 
       <div className="flex justify-center flex-grow">
         <div className="flex space-x-6 md:space-x-4">
-          <Link href="/services">
+          <Link href="/">
             <a>
               <HeaderIcon active Icon={HomeIcon} title="Home" />
             </a>
           </Link>
 
-          <Link href="/test.js">
+          <Link href="/services">
             <a>
               <HeaderIcon Icon={UserGroupIcon} title="The Team" />
             </a>
