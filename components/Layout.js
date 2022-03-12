@@ -4,7 +4,7 @@ import Header from "./Header";
 const Layout = ({ children }) => (
   <>
     <Head>
-      <title>Note App</title>
+      <title>Medical Transparency</title>
     </Head>
     <Header />
     {children}
