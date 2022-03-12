@@ -9,20 +9,20 @@ const Index = ({ logs }) => {
       <div className="grid wrapper">
         {logs.map((log) => {
           return (
-            <div key={log._id}>
+            <div key={log.id}>
               <Card>
                 <Card.Content>
                   <Card.Header>
-                    <Link href={`/${log._id}`}>
+                    <Link href={`/${log.id}`}>
                       <a>{log.title}</a>
                     </Link>
                   </Card.Header>
                 </Card.Content>
                 <Card.Content extra>
-                  <Link href={`/${log._id}`}>
+                  <Link href={`/${log.id}`}>
                     <Button primary>View</Button>
                   </Link>
-                  <Link href={`/${log._id}/edit`}>
+                  <Link href={`/${log.id}/edit`}>
                     <Button primary>Edit</Button>
                   </Link>
                 </Card.Content>
