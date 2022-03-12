@@ -1,36 +1,10 @@
 import Link from "next/link";
 import fetch from "isomorphic-unfetch";
-import { Button, Card } from "semantic-ui-react";
 
 const Index = ({ logs }) => {
   return (
-    <div className="notes-container">
+    <div>
       <h1>Notes</h1>
-      <div className="grid wrapper">
-        {logs.map((log) => {
-          return (
-            <div key={log.id}>
-              <Card>
-                <Card.Content>
-                  <Card.Header>
-                    <Link href={`/${log.id}`}>
-                      <a>{log.title}</a>
-                    </Link>
-                  </Card.Header>
-                </Card.Content>
-                <Card.Content extra>
-                  <Link href={`/${log.id}`}>
-                    <Button primary>View</Button>
-                  </Link>
-                  <Link href={`/${log.id}/edit`}>
-                    <Button primary>Edit</Button>
-                  </Link>
-                </Card.Content>
-              </Card>
-            </div>
-          );
-        })}
-      </div>
     </div>
   );
 };
