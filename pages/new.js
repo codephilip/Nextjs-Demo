@@ -10,15 +10,15 @@ const NewLog = () => {
   const [errors, setErrors] = useState({});
   const router = useRouter();
 
-  useEffect(() => {
-    if (isSubmitting) {
-      if (Object.keys(errors).length === 0) {
-        createLog();
-      } else {
-        setIsSubmitting(false);
-      }
-    }
-  });
+  //   useEffect(() => {
+  //     if (isSubmitting) {
+  //       if (Object.keys(errors).length === 0) {
+  //         createLog();
+  //       } else {
+  //         setIsSubmitting(false);
+  //       }
+  //     }
+  //   });
 
   const createLog = async () => {
     try {
