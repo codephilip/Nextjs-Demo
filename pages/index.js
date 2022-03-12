@@ -6,6 +6,31 @@ const Index = ({ logs }) => {
   return (
     <div className="notes-container">
       <h1>Notes</h1>
+      <div className="grid wrapper">
+        {logs.map((log) => {
+          return (
+            <div key={log._id}>
+              <Card>
+                <Card.Content>
+                  <Card.Header>
+                    <Link href={`/${log._id}`}>
+                      <a>{log.title}</a>
+                    </Link>
+                  </Card.Header>
+                </Card.Content>
+                <Card.Content extra>
+                  <Link href={`/${log._id}`}>
+                    <Button primary>View</Button>
+                  </Link>
+                  <Link href={`/${log._id}/edit`}>
+                    <Button primary>Edit</Button>
+                  </Link>
+                </Card.Content>
+              </Card>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
