@@ -18,7 +18,7 @@ const NewLog = () => {
         setIsSubmitting(false);
       }
     }
-  });
+  },[errors]);
 
   const createLog = async () => {
     try {
