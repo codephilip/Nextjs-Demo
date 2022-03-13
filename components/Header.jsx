@@ -43,7 +43,7 @@ const Header = () => {
             </a>
           </Link>
 
-          <Link href="/services">
+          <Link href="/team">
             <a>
               <HeaderIcon Icon={UserGroupIcon} title="The Team" />
             </a>
