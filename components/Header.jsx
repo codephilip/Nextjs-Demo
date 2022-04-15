@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import {
   BellIcon,
@@ -21,8 +22,9 @@ import {
 import HeaderIcon from "./HeaderIcon";
 
 const Header = () => {
+  const router = useRouter();
   return (
-    <div className="sticky top-0 bg-white flex items-center p-2 lg:px-5 shadow-md">
+    <div className="sticky z-50 top-0 bg-white flex items-center p-2 lg:px-5 shadow-md">
       <div className="flex items-center">
         <Link href="/">
           <a>
@@ -44,7 +46,7 @@ const Header = () => {
         <div className="flex space-x-6 md:space-x-2">
           <Link href="/">
             <a>
-              <HeaderIcon active Icon={HomeIcon} title="Home" />
+              <HeaderIcon Icon={HomeIcon} title="Home" />
             </a>
           </Link>
 
@@ -56,7 +58,11 @@ const Header = () => {
 
           <HeaderIcon Icon={ShieldCheckIcon} title="Insurance" />
           <HeaderIcon Icon={LocationMarkerIcon} title="Your Location" />
-          <HeaderIcon Icon={ChevronDoubleDownIcon} title="Services" />
+          <Link href="/products">
+            <a>
+              <HeaderIcon Icon={ChevronDoubleDownIcon} title="Services" />
+            </a>
+          </Link>
         </div>
       </div>
 

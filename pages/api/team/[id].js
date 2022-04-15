@@ -1,5 +1,5 @@
 import dbConnect from "../../../utils/mongo";
-import Product from "../../../models/Product";
+import Team from "../../../models/Team";
 
 export default async function handler(req, res) {
   const {
@@ -13,8 +13,8 @@ export default async function handler(req, res) {
 
   if (method === "GET") {
     try {
-      const product = await Product.findById(id);
-      res.status(200).json(product);
+      const team = await Team.findById(id);
+      res.status(200).json(team);
     } catch (err) {
       res.status(500).json(err);
     }
@@ -25,10 +25,10 @@ export default async function handler(req, res) {
       return res.status(401).json("Not authenticated!");
     }
     try {
-      const product = await Product.findByIdAndUpdate(id, req.body, {
+      const team = await Team.findByIdAndUpdate(id, req.body, {
         new: true,
       });
-      res.status(200).json(product);
+      res.status(200).json(team);
     } catch (err) {
       res.status(500).json(err);
     }
@@ -39,7 +39,7 @@ export default async function handler(req, res) {
       return res.status(401).json("Not authenticated!");
     }
     try {
-      await Product.findByIdAndDelete(id);
+      await Team.findByIdAndDelete(id);
       res.status(200).json("The product has been deleted!");
     } catch (err) {
       res.status(500).json(err);

@@ -1,19 +1,19 @@
-import styles from "../styles/ProductList.module.css";
+//import styles from "../styles/ProductList.module.css";
 import ProductCard from "./ProductCard";
-import { useState } from "react";
 
 const ProductList = ({ productList }) => {
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>Homepage</h1>
-      <p className={styles.desc}>
-        This data is being injected into the front end by our Api. It is using
-        our Products Collection and data model to insert the data below.
-      </p>
-      <div className={styles.wrapper}>
-        {productList.map((product) => (
-          <ProductCard key={product._id} product={product} />
-        ))}
+    <div>
+      <div class="p-8 bg-white dark:bg-gray-800 rounded-lg shadow">
+        <div class="p-4">
+          <div class="text-center mb-4 opacity-90">
+            <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-10">
+              {productList.map((product) => (
+                <ProductCard key={product._id} product={product} />
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
