@@ -13,24 +13,58 @@ const ProductForm = () => {
         <div class="-my-8 ">
           <div class="py-2">
             <fieldset>
-              <legend class="text-xl font-medium">Servive Type</legend>
+              <legend class="text-xl font-medium">Service Type</legend>
 
-              <ul class="grid gap-1 mt-3 sm:grid-cols-4">
+              <ul class="grid gap-1 mt-3 sm:grid-cols-6">
                 <li>
                   <label class="flex items-center text-sm">
-                    <input type="radio" class="w-6 h-6 border-gray-200" />
-                    <span class="ml-3 font-medium">words</span>
+                    <input type="checkbox" 
+                    class="w-6 h-6 border-gray-200" />
+                    <span class="ml-3 font-medium">X-Ray</span>
                   </label>
                 </li>
 
                 <li>
                   <label class="flex items-center text-sm">
                     <input
-                      type="radio"
+                      type="checkbox"
                       class="w-6 h-6 border-gray-200"
-                      checked
                     />
-                    <span class="ml-3 font-medium ">Postgraduate</span>
+                    <span class="ml-3 font-medium ">Ultrasound</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="flex items-center text-sm">
+                    <input type="checkbox" 
+                    class="w-6 h-6 border-gray-200" />
+                    <span class="ml-3 font-medium">MRI</span>
+                  </label>
+                </li>
+
+                <li>
+                  <label class="flex items-center text-sm">
+                    <input
+                      type="checkbox"
+                      class="w-6 h-6 border-gray-200"
+                    />
+                    <span class="ml-3 font-medium ">Mammogram</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="flex items-center text-sm">
+                    <input type="checkbox" 
+                    class="w-6 h-6 border-gray-200" />
+                    <span class="ml-3 font-medium">PET Scan</span>
+                  </label>
+                </li>
+
+                <li>
+                  <label class="flex items-center text-sm">
+                    <input
+                      type="checkbox"
+                      class="w-6 h-6 border-gray-200"
+                    />
+                    <span class="ml-3 font-medium ">CT Scan</span>
                   </label>
                 </li>
               </ul>
@@ -85,53 +119,7 @@ const ProductForm = () => {
             </fieldset>
           </div>
 
-          <div class="py-2">
-            <fieldset>
-              <legend class="text-xl font-medium">University Rating</legend>
 
-              <ul class="grid grid-cols-1 gap-4 mt-6 sm:grid-cols-4">
-                <li>
-                  <label class="flex items-center text-sm">
-                    <input
-                      type="checkbox"
-                      class="w-6 h-6 border border-gray-200 rounded-md"
-                    />
-                    <span class="ml-3 font-medium">Rated 1+</span>
-                  </label>
-                </li>
-
-                <li>
-                  <label class="flex items-center text-sm">
-                    <input
-                      type="checkbox"
-                      class="w-6 h-6 border border-gray-200 rounded-md"
-                    />
-                    <span class="ml-3 font-medium">Rated 2+</span>
-                  </label>
-                </li>
-
-                <li>
-                  <label class="flex items-center text-sm">
-                    <input
-                      type="checkbox"
-                      class="w-6 h-6 border border-gray-200 rounded-md"
-                    />
-                    <span class="ml-3 font-medium">Rated 3+</span>
-                  </label>
-                </li>
-
-                <li>
-                  <label class="flex items-center text-sm">
-                    <input
-                      type="checkbox"
-                      class="w-6 h-6 border border-gray-200 rounded-md"
-                    />
-                    <span class="ml-3 font-medium">Rated 4+</span>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-          </div>
         </div>
       </div>
 
@@ -144,7 +132,7 @@ const ProductForm = () => {
         </button>
 
         <button
-          class="px-5 py-3 font-medium text-white bg-orange-500 rounded-lg"
+          class="px-5 py-3 font-medium text-white bg-orange-500 rounded-lg mr-[50%]"
           type="submit"
         >
           Show results
