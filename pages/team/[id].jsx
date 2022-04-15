@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import axios from "axios";
-import TeamMemberCard from "../../components/TeamCard2";
+import TeamMemberCard from "../../components/TeamMemberCard";
 
 const Team = ({ team }) => {
   return (
