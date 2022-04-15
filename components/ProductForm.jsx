@@ -19,7 +19,7 @@ const ProductForm = () => {
                 <li>
                   <label class="flex items-center text-sm">
                     <input type="radio" class="w-6 h-6 border-gray-200" />
-                    <span class="ml-3 font-medium">Undergraduate</span>
+                    <span class="ml-3 font-medium">words</span>
                   </label>
                 </li>
 
