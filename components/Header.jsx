@@ -24,11 +24,16 @@ const Header = () => {
   return (
     <div className="sticky top-0 bg-white flex items-center p-2 lg:px-5 shadow-md">
       <div className="flex items-center">
-        <Image alt="" src="/icon.png" width={30} height={50} layout="" />
+        <Link href="/">
+          <a>
+            <Image alt="" src="/icon.png" width={30} height={50} layout="" />
+          </a>
+        </Link>
+
         <div className="flex ml-10 item-center rounded-full bg-gray-100 p-2">
           <SearchIcon className="h-6 text-gray-500 flex-shrink" />
           <input
-            className="hidden md:inline-flex flex ml-2 items-center bg-transparent outline-none"
+            className="flex ml-2 items-center bg-transparent outline-none"
             type="text"
             placeholder="Search Services"
           />
@@ -36,7 +41,7 @@ const Header = () => {
       </div>
 
       <div className="flex justify-center flex-grow">
-        <div className="flex space-x-6 md:space-x-4">
+        <div className="flex space-x-6 md:space-x-2">
           <Link href="/">
             <a>
               <HeaderIcon active Icon={HomeIcon} title="Home" />
