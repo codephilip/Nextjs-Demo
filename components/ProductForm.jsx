@@ -9,7 +9,7 @@ const ProductForm = () => {
         <p class="text-lg font-medium">Search Services</p>
       </header>
 
-      <main class="flow-root p-6 overflow-y-auto h-80">
+      <div class="grid place-items-center p-6 border-2 border-black overflow-y-auto h-80">
         <div class="-my-8 ">
           <div class="py-2">
             <fieldset>
@@ -133,7 +133,7 @@ const ProductForm = () => {
             </fieldset>
           </div>
         </div>
-      </main>
+      </div>
 
       <footer class="flex items-center justify-between p-6">
         <button
