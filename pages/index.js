@@ -8,28 +8,41 @@ import styles from "../styles/Home.module.css";
 export default function Home({ productList }) {
   return (
     <div className={styles.HomePageContent}>
-      <div style={{ display: "flex" }}>
-        <div className={styles.hpcSideColumn}>
-          <p className={styles.hpMainMessage}>
-            WE WANT YOU TO SEE WHAT WE SEE.
-          </p>
+      <div>
+      <section class="bg-softBeige ">
+        <div class="container px-6 py-8 mx-auto">
+            <div class="items-center lg:flex">
+                <div class="w-1/4 text-6xl text-deepBlue">
+                  <p style={{
+            fontFamily: "Bebas Neue",
+            color: "#234473",}}
+            >WE WANT YOU TO SEE WHAT WE SEE</p>
+                </div>
+
+                <div class="mt-8 w-3/4">
+                    <div class="flex items-center lg:justify-end">
+                        <div>
+                        <Image src={doctorimg1} alt="Hero"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <Image src={doctorimg1} alt="Hero" width={1005} height={698} />
+    </section>
       </div>
+
       <div className={styles.break}></div>
       <div className={styles.ourStory}>
-        <h1
+        <h1 class="text-7xl"
           style={{
             fontFamily: "Bebas Neue",
             padding: "10px",
-            fontSize: "100px",
             color: "#234473",
             textAlign: "center",
           }}
         >
           OUR STORY
         </h1>
-
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
           pharetra sollicitudin orem ac ultricies. Vestibulum eget mollis dolor.
@@ -45,13 +58,31 @@ export default function Home({ productList }) {
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
       </div>
-      <div style={{ display: "flex" }}>
-        <div className={styles.ourStoryImage}>
-          <Image src={doctorimg2} alt="Hero" width={600} height={1000} />
+
+      <div>
+      <section class="bg-softBeige ">
+        <div class="container px-6 py-8 mx-auto">
+            <div class="items-center lg:flex">
+
+                  <div class="mt-8 w-3/5">
+                    <div class="flex items-start">
+                        <div>
+                        <Image src={doctorimg2} alt="Hero"/>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="w-2/5 text-6xl">
+                  <p style={{
+            fontFamily: "Bebas Neue",
+            color: "#234473",}}
+            >"LOREM IPSUM DOLOR SIT AMET"</p>
+                </div>
+
+      
+            </div>
         </div>
-        <div className={styles.ourStorySideQuote}>
-          <p>"LOREM IPSUM DOLOR SIT AMET"</p>
-        </div>
+    </section>
       </div>
     </div>
   );
