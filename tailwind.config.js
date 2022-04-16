@@ -5,13 +5,28 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
-  plugins: [
-    plugin(function ({ addBase, theme }) {
-      addBase({
-        h1: { fontSize: theme("fontSize.4xl") },
-        h2: { fontSize: theme("fontSize.xl") },
-        h3: { fontSize: theme("fontSize.lg") },
-      });
-    }),
-  ],
+  theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      'beige': '#E5D9CD',
+      'orange': {
+        400: '#FB923C',
+        600: '#EA580C',
+      },
+      'blue': '#234473',
+      'grey': {
+        100: '#F3F4F6',
+        500: '#6B7280',
+      },
+    },
+    extend: {
+      fontFamily: {
+        'BebasNeue' : ['Bebas Neue'],
+        'Inter' : ['Inter'],
+        'Roboto' : ['Roboto'],
+      },
+    },
+  },
+  plugins: [],
 };

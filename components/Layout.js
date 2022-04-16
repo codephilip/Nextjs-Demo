@@ -6,6 +6,9 @@ const Layout = ({ children }) => (
   <>
     <Head>
       <title>Medical Transparency</title>
+      <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"/> 
+      <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
     </Head>
     <Header />
     {children}
