@@ -29,20 +29,22 @@ const ProductCard = ({ product }) => {
               taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh
               mi pug VHS try-hard.
             </p>
-            <a class="mt-3 text-indigo-500 inline-flex items-center">
-              Learn More
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-4 h-4 ml-2"
-                viewBox="0 0 24 24"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
+            <Link href={`/products/${product._id}`} passHref>
+              <a class="mt-3 text-indigo-500 inline-flex items-center">
+                Learn More
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="w-4 h-4 ml-2"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </Link>
           </div>
         </div>
       </div>

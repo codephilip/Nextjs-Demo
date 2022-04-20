@@ -1,7 +1,7 @@
 import axios from "axios";
+import ProductForm from "../../components/ProductForm";
 
 import ProductList from "../../components/ProductList";
-import ProductForm from "../../components/ProductForm";
 export default function Home({ productList }) {
   return (
     <div>
@@ -13,7 +13,11 @@ export default function Home({ productList }) {
 }
 
 export const getServerSideProps = async () => {
-  const res = await axios.get("http://localhost:3000/api/products");
+  // const res = await axios.get("http://localhost:3000/api/products");
+  const res = await axios.get(
+    "https://cranky-banach-68238c.netlify.app/api/products"
+  );
+
   return {
     props: {
       productList: res.data,
