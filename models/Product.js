@@ -13,11 +13,12 @@ const ProductSchema = new mongoose.Schema({
   },
   img: {
     type: String,
-    required: true,
   },
-  prices: {
-    type: [Number],
-    required: true,
+  secondary_desc: {
+    type: String,
+  },
+  CPT: {
+    type: Array,
   },
 });
 
