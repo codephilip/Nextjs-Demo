@@ -18,52 +18,40 @@ const ProductForm = () => {
               <ul class="grid gap-5 mt-3 sm:grid-cols-3">
                 <li>
                   <label class="flex items-center text-sm">
-                    <input type="checkbox" 
-                    class="w-6 h-6 border-gray-200" />
+                    <input type="checkbox" class="w-6 h-6 border-gray-200" />
                     <span class="ml-3 font-medium">X-Ray</span>
                   </label>
                 </li>
 
                 <li>
                   <label class="flex items-center text-sm">
-                    <input
-                      type="checkbox"
-                      class="w-6 h-6 border-gray-200"
-                    />
+                    <input type="checkbox" class="w-6 h-6 border-gray-200" />
                     <span class="ml-3 font-medium ">Ultrasound</span>
                   </label>
                 </li>
                 <li>
                   <label class="flex items-center text-sm">
-                    <input type="checkbox" 
-                    class="w-6 h-6 border-gray-200" />
+                    <input type="checkbox" class="w-6 h-6 border-gray-200" />
                     <span class="ml-3 font-medium">MRI</span>
                   </label>
                 </li>
 
                 <li>
                   <label class="flex items-center text-sm">
-                    <input
-                      type="checkbox"
-                      class="w-6 h-6 border-gray-200"
-                    />
+                    <input type="checkbox" class="w-6 h-6 border-gray-200" />
                     <span class="ml-3 font-medium ">Mammogram</span>
                   </label>
                 </li>
                 <li>
                   <label class="flex items-center text-sm">
-                    <input type="checkbox" 
-                    class="w-6 h-6 border-gray-200" />
+                    <input type="checkbox" class="w-6 h-6 border-gray-200" />
                     <span class="ml-3 font-medium">PET Scan</span>
                   </label>
                 </li>
 
                 <li>
                   <label class="flex items-center text-sm">
-                    <input
-                      type="checkbox"
-                      class="w-6 h-6 border-gray-200"
-                    />
+                    <input type="checkbox" class="w-6 h-6 border-gray-200" />
                     <span class="ml-3 font-medium ">CT Scan</span>
                   </label>
                 </li>
@@ -118,25 +106,22 @@ const ProductForm = () => {
               </ul>
             </fieldset>
           </div>
-
-
         </div>
       </div>
-        <footer class="flex items-center justify-between p-6 w-1/4 m-auto">
-              <button
-                class="text-sm font-medium text-gray-600 underline"
-                type="button"
-              >
-                Clear all
-              </button>
-              <button
-                class="px-5 py-3 font-medium text-white bg-orange-500 rounded-lg"
-                type="submit"
-              >
-                Show results
-              </button>
-            </footer>
-            
+      <footer class="flex items-center justify-between p-6 w-1/4 m-auto">
+        <button
+          class="text-sm font-medium text-gray-600 underline"
+          type="button"
+        >
+          Clear all
+        </button>
+        <button
+          class="px-5 py-3 font-medium text-white bg-orange-500 rounded-lg"
+          type="submit"
+        >
+          Show results
+        </button>
+      </footer>
     </form>
   );
 };
