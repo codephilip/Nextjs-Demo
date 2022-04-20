@@ -1,7 +1,7 @@
 import axios from "axios";
+import ProductForm from "../../components/ProductForm";
 
 import ProductList from "../../components/ProductList";
-import ProductForm from "../../components/ProductForm";
 export default function Home({ productList }) {
   return (
     <div>

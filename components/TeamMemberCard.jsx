@@ -4,10 +4,10 @@ import Link from "next/link";
 
 const TeamMemberCard = ({ team }) => {
   return (
-    <div class="max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+    <div class="mt-10 max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
       <img
         class="object-cover object-center w-full h-56"
-        src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
+        src={team.img}
         alt="avatar"
       />
 
