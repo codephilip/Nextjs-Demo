@@ -37,7 +37,7 @@ const TeamMemberCard = ({ team }) => {
             />
           </svg>
 
-          <h1 class="px-2 text-sm">Meraki UI</h1>
+          <h1 class="px-2 text-sm">{team.role}</h1>
         </div>
 
         <div class="flex items-center mt-4 text-gray-700 dark:text-gray-200">
