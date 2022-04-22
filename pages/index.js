@@ -7,17 +7,17 @@ import styles from "../styles/Home.module.css";
 
 export default function Home({ productList }) {
   return (
-    <div classNameName={styles.HomePageContent}>
+    <div className={styles.HomePageContent}>
       <div style={{ display: "flex" }}>
-        <div classNameName={styles.hpcSideColumn}>
-          <p classNameName={styles.hpMainMessage}>
+        <div className={styles.hpcSideColumn}>
+          <p className={styles.hpMainMessage}>
             WE WANT YOU TO SEE WHAT WE SEE.
           </p>
         </div>
         <Image src={doctorimg1} alt="Hero" width={1005} height={698} />
       </div>
-      <div classNameName={styles.break}></div>
-      <div classNameName={styles.ourStory}>
+      <div className={styles.break}></div>
+      <div className={styles.ourStory}>
         <h1
           style={{
             fontFamily: "Bebas Neue",
@@ -46,10 +46,10 @@ export default function Home({ productList }) {
         </p>
       </div>
       <div style={{ display: "flex" }}>
-        <div classNameName={styles.ourStoryImage}>
+        <div className={styles.ourStoryImage}>
           <Image src={doctorimg2} alt="Hero" width={600} height={1000} />
         </div>
-        <div classNameName={styles.ourStorySideQuote}>
+        <div className={styles.ourStorySideQuote}>
           <p>"LOREM IPSUM DOLOR SIT AMET"</p>
         </div>
       </div>
