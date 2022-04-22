@@ -4,27 +4,27 @@ import Link from "next/link";
 
 const TeamMemberCard = ({ team }) => {
   return (
-    <div class="mt-5 max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 pb-5">
+    <div className="mt-5 max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 pb-5">
       <img
-        class="object-cover object-center w-full h-56 mt-5"
+        className="object-cover object-center w-full h-56 mt-5"
         src={team.img}
         alt="avatar"
       />
 
-      <div class="flex items-center px-6 py-3 bg-gray-900">
-        <h1 class="mx-3 text-lg font-semibold text-white">{team.role}</h1>
+      <div className="flex items-center px-6 py-3 bg-gray-900">
+        <h1 className="mx-3 text-lg font-semibold text-white">{team.role}</h1>
       </div>
 
-      <div class="px-6 py-4">
-        <h1 class="text-xl font-semibold text-gray-800 dark:text-white">
+      <div className="px-6 py-4">
+        <h1 className="text-xl font-semibold text-gray-800 dark:text-white">
           {team.name}
         </h1>
 
-        <p class="py-2 text-gray-700 dark:text-gray-400">{team.bio}</p>
+        <p className="py-2 text-gray-700 dark:text-gray-400">{team.bio}</p>
 
-        <div class="flex items-center mt-4 text-gray-700 dark:text-gray-200">
+        <div className="flex items-center mt-4 text-gray-700 dark:text-gray-200">
           <svg
-            class="w-6 h-6 fill-current"
+            className="w-6 h-6 fill-current"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -37,12 +37,12 @@ const TeamMemberCard = ({ team }) => {
             />
           </svg>
 
-          <h1 class="px-2 text-sm">{team.role}</h1>
+          <h1 className="px-2 text-sm">{team.role}</h1>
         </div>
 
-        <div class="flex items-center mt-4 text-gray-700 dark:text-gray-200">
+        <div className="flex items-center mt-4 text-gray-700 dark:text-gray-200">
           <svg
-            class="w-6 h-6 fill-current"
+            className="w-6 h-6 fill-current"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -59,12 +59,12 @@ const TeamMemberCard = ({ team }) => {
             />
           </svg>
 
-          <h1 class="px-2 text-sm">California</h1>
+          <h1 className="px-2 text-sm">California</h1>
         </div>
 
-        <div class="flex items-center mt-4 text-gray-700 dark:text-gray-200">
+        <div className="flex items-center mt-4 text-gray-700 dark:text-gray-200">
           <svg
-            class="w-6 h-6 fill-current"
+            className="w-6 h-6 fill-current"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +76,7 @@ const TeamMemberCard = ({ team }) => {
             />
           </svg>
 
-          <h1 class="px-2 text-sm">patterson@example.com</h1>
+          <h1 className="px-2 text-sm">patterson@example.com</h1>
         </div>
       </div>
     </div>

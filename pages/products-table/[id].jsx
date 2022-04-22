@@ -12,19 +12,34 @@ const Product = ({ product }) => {
   );
 };
 
-export const getServerSideProps = async ({ params }) => {
-  const res = await axios.get(
-    `http://localhost:3000/api/products/${params.id}`
-  );
+// export const getServerSideProps = async ({ params }) => {
+//   const res = await axios.get(
+//     `http://localhost:3000/api/products/${params.id}`
+//   );
 
-  // const res = await axios.get(
-  //   `https://cranky-banach-68238c.netlify.app/api/products/${params.id}`
-  // );
+//   // const res = await axios.get(
+//   //   `https://cranky-banach-68238c.netlify.app/api/products/${params.id}`
+//   // );
+//   return {
+//     props: {
+//       product: res.data,
+//     },
+//   };
+// };
+
+export async function getStaticPath() {
+  const products = await fetch("http://localhost:3000/api/products").then((r) =>
+    r.json()
+  );
   return {
-    props: {
-      product: res.data,
-    },
+    paths: products.map((product) => {
+      return {
+        params: {
+          productId: product.name,
+        },
+      };
+    }),
   };
-};
+}
 
 export default Product;
