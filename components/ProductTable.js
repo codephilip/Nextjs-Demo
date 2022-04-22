@@ -12,16 +12,28 @@ const ProductList = ({ products }) => {
   );
 };
 
+// export const getServerSideProps = async () => {
+//   //const res = await axios.get("http://localhost:3000/api/products");
+//   const res = await axios.get(
+//     "https://cranky-banach-68238c.netlify.app/api/products"
+//   );
+//   console.log(res);
+//   return {
+//     props: {
+//       products: res.data,
+//     },
+//   };
+// };
 export const getServerSideProps = async () => {
-  //const res = await axios.get("http://localhost:3000/api/products");
-  const res = await axios.get(
-    "https://cranky-banach-68238c.netlify.app//api/products"
-  );
-  console.log(res);
+  const products = await fetch("http://localhost:3000/api/products");
   return {
-    props: {
-      products: res.data,
-    },
+    paths: characters.map((character) => {
+      return {
+        params: {
+          id: products.id,
+        },
+      };
+    }),
   };
 };
 export default ProductList;
