@@ -1,11 +1,12 @@
 import axios from "axios";
+import { useRouter } from "next/router";
 import ProductForm from "../../components/ProductForm";
-
 import ProductList from "../../components/ProductList";
+
 export default function Home({ productList }) {
   return (
     <div>
-      <h1 class="text-center pt-10">Radiology</h1>
+      <h1 className="text-center pt-10">Radiology</h1>
       <ProductForm />
       <ProductList productList={productList} />
     </div>
