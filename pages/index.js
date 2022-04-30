@@ -9,20 +9,18 @@ export default function Home({ productList }) {
   return (
     <section class="text-gray-600 body-font bg-beige">
   <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-    <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center flow-root">
-      <h1 class=" ml-32 title-font text-8xl mb-4 font-BebasNeue text-blue float-left">
+    <div >
+      <h1 class="md:ml-32 title-font text-8xl mb-4 font-BebasNeue text-blue leading-normal">
         WE 
         <br/>WANT 
-        <br/>YOU
-        <br/>TO
-        <br/>SEE
+        <br/>YOU TO
+        SEE
         <br/>WHAT
-        <br/>WE
-        <br/>SEE
+        <br/>WE SEE
       </h1>
       
     </div>
-    <div class="max-w-full h-auto">
+    <div class="md:m-8">
         <Image src={doctorimg1} alt="Hero" class="object-coverobject-center rounded" />
     </div>
   </div>
@@ -44,7 +42,7 @@ export default function Home({ productList }) {
   </div>
 
   <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 md:-m-8 sm:w-full">
         <Image src={doctorimg2} alt="Hero" class="object-coverobject-center rounded" />
     </div>
     <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
