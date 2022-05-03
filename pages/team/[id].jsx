@@ -13,10 +13,10 @@ const Team = ({ team }) => {
 };
 
 export const getServerSideProps = async ({ params }) => {
-  const res = await axios.get(`http://localhost:3000/api/team/${params.id}`);
-  // const res = await axios.get(
-  //   `https://cranky-banach-68238c.netlify.app/team/${params.id}`
-  // );
+  // const res = await axios.get(`http://localhost:3000/api/team/${params.id}`);
+  const res = await axios.get(
+    `https://cranky-banach-68238c.netlify.app/team/${params.id}`
+  );
   return {
     props: {
       team: res.data,
