@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import react, {useState} from "react";
+import react, {useState, useEffect} from "react";
 import { useRouter } from "next/router";
 
 import {
@@ -11,6 +11,8 @@ import {
   ViewGridIcon,
 } from "@heroicons/react/solid";
 import {
+  XIcon,
+  MenuIcon,
   FlagIcon,
   SearchIcon,
   PlayIcon,
@@ -27,22 +29,23 @@ const Header = () => {
   const [visibility, setVisibility] = useState(false);
   const router = useRouter();
   return (
-    <nav class="bg-beige shadow dark:bg-gray-800 shadow-md">
-        <div class="container px-6 py-3 mx-auto md:flex">
+    <nav class="md:flex justify-between items-center bg-beige shadow dark:bg-gray-800 shadow-md sticky top-0 z-20">
+        
             <div class="flex items-center justify-between">
                 <div>
-                    <a class="text-2xl font-bold text-gray-800 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300">
+                    <a class="p-5">
                     <Image alt="" src="/icon.png" width={30} height={50} layout="fixed" />
                     </a>
                 </div>
                 
                 
-                <div class="flex md:hidden">
-                  <button class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" className="hover:text-orange" onClick={() => setVisibility(!visibility)}>
-                        <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
-                            <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
-                        </svg>
-                  </button>
+                <div class="md:hidden flex item-center justify-between p-5">
+                  
+                  {visibility ? (
+                  <XIcon Icon={MenuIcon} onClick={() => setVisibility(!visibility)} className="block w-10 h-10 p-1 cursor-pointer"/>
+                  ) : (<MenuIcon Icon={MenuIcon} onClick={() => setVisibility(!visibility)} className="block w-10 h-10 p-1 cursor-pointer"/>)
+                }
+                  
                 </div>
             </div>
 
@@ -68,10 +71,12 @@ const Header = () => {
                         <HeaderIcon Icon={ChevronDoubleDownIcon} title="Services" />
                       </a>
                     </Link>
+
+                    
                 </div>
                 
-                <div class="relative">
-                    <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                <div class="relative px-5">
+                    <span class="absolute inset-y-0 left-5 flex items-center pl-3">
                         <svg class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none">
                             <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
@@ -80,7 +85,7 @@ const Header = () => {
                     <input type="text" class="w-full py-2 pl-10 pr-4 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Search"/>
                 </div>
             </div>
-        </div>
+        
         <div>
               {
             visibility?<NavBarMenu/>:null
