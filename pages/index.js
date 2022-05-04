@@ -50,7 +50,7 @@ export default function Home({ productList }) {
           <Image src={doctorimg2} alt="Hero" width={600} height={1000} />
         </div>
         <div className={styles.ourStorySideQuote}>
-          <p>"LOREM IPSUM DOLOR SIT AMET"</p>
+          <p>&quot;LOREM IPSUM DOLOR SIT AMET&quot;</p>
         </div>
       </div>
     </div>
