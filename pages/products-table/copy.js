@@ -3,8 +3,8 @@ import { connectToDatabase } from "../../utils/mongodb";
 //import ProductTable from "../../components/ProductForm";
 
 //import ProductList from "../../components/ProductList";
-export default function Home({ services }) {
-  console.log(services);
+export default function Home({ products }) {
+  console.log(products);
   return (
     <div>
       <h1 className="text-center pt-10">Radiology</h1>
@@ -20,7 +20,13 @@ export default function Home({ services }) {
                       scope="col"
                       className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
                     >
-                      Hospital
+                      #
+                    </th>
+                    <th
+                      scope="col"
+                      className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                    >
+                      Title
                     </th>
                     <th
                       scope="col"
@@ -32,47 +38,29 @@ export default function Home({ services }) {
                       scope="col"
                       className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
                     >
-                      Rate
+                      Price
                     </th>
                     <th
                       scope="col"
                       className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
                     >
-                      Procedure Number
-                    </th>
-                    <th
-                      scope="col"
-                      className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
-                    >
-                      Charge Code
+                      Location
                     </th>
                   </tr>
                 </thead>
                 <tbody>
-                  {services.map((service) => {
-                    return (
-                      <tr
-                        key={service._id}
-                        className="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100"
-                      >
-                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                          {service.hosital}
+                  <tr className="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                    {products.map((product) => {
+                      return (
+                        <td
+                          key={product._id}
+                          className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                        >
+                          {product.title}
                         </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                          {service.description}
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                          {service.rate}
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                          {service.procedureNumber}
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                          {service.chargeCode}
-                        </td>
-                      </tr>
-                    );
-                  })}
+                      );
+                    })}
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -95,26 +83,12 @@ export default function Home({ services }) {
 //   };
 
 export async function getServerSideProps(context) {
-  const { db } = await connectToDatabase();
+  const { client } = await connectToDatabase();
 
-  const data = await db
-    .collection("services")
-    .find()
-    //.sort({ _id: 1 })
-    //.limit(40)
-    .toArray();
-
-  const services = data.map((service) => {
-    return {
-      hosital: service.hospital,
-      description: service.Description,
-      rate: service.Rate,
-      procedureNumber: service.ProcedureNumber,
-      chargeCode: service.ChargeCode,
-    };
-  });
-
+  const isConnected = await client.isConnected();
   return {
-    props: { services },
+    props: {
+      isConnected,
+    },
   };
 }
