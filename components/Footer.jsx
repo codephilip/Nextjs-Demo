@@ -7,7 +7,7 @@ const Footer = () => {
           <Link href="/">
             <a>
               <svg
-                className="w-8 text-deep-purple-accent-400"
+                className="w-8 text-deep-purple-accent-400 pb-5"
                 viewBox="0 0 24 24"
                 strokeLinejoin="round"
                 strokeWidth="2"

@@ -3,6 +3,7 @@ import axios from "axios";
 
 //import ProductList from "../../components/ProductList";
 export default function Home({ products }) {
+  console.log(products);
   return (
     <div>
       <h1 className="text-center pt-10">Radiology</h1>
@@ -68,11 +69,10 @@ export default function Home({ products }) {
     </div>
   );
 }
-
 export const getServerSideProps = async () => {
   // const res = await axios.get("http://localhost:3000/api/products");
   const res = await axios.get(
-    "https://cranky-banach-68238c.netlify.app/api/products"
+    `https://cranky-banach-68238c.netlify.app/api/products?q=${context.query.term}`
   );
   console.log(res);
   return {
