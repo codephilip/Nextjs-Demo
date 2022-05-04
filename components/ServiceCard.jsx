@@ -5,12 +5,12 @@ import Link from "next/link";
 const ServiceCard = ({ service }) => {
   return (
     <div>
-      <div classNameName={styles.container}>
+      <div className={styles.container}>
         <div width="500" height="500"></div>
       </div>
-      <h1 classNameName={styles.title}>{service.title}</h1>
-      <span classNameName={styles.product}>${service.prices[0]}</span>
-      <p classNameName={styles.desc}>{service.desc}</p>
+      <h1 className={styles.title}>{service.title}</h1>
+      <span className={styles.product}>${service.prices[0]}</span>
+      <p className={styles.desc}>{service.desc}</p>
     </div>
   );
 };

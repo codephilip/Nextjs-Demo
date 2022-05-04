@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useRouter } from "next/router";
-import ProductForm from "../../components/ProductForm2";
+import ProductForm from "../../components/ProductForm";
 import ProductList from "../../components/ProductList";
 
 export default function Home({ productList }) {
