@@ -1,154 +1,153 @@
+import Link from "next/link";
 const ProductForm = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
     <form
-      class="relative w-screen bg-white divide-gray-100 rounded-lg shadow-md"
+      onSubmit={handleSubmit}
+      className="relative w-screen bg-white divide-gray-100 rounded-lg shadow-md"
       role="dialog"
       aria-label="Filters"
     >
-      <header class="p-6 text-center">
-        <p class="text-lg font-medium">Search Services</p>
+      <header className="p-6 text-center">
+        <p className="text-lg font-medium">Filter Services</p>
       </header>
 
-      <main class="flow-root p-6 overflow-y-auto h-96">
-        <div class="-my-8 ">
-          <div class="py-8">
+      <div className="grid place-items-center border-2 border-black overflow-y-auto h-80">
+        <div className="mt-4 ">
+          <div className="py-2">
             <fieldset>
-              <legend class="text-xl font-medium">Study Type</legend>
+              <legend className="text-xl font-medium">Service Type</legend>
 
-              <ul class="grid grid-cols-1 gap-4 mt-6 sm:grid-cols-2">
+              <ul className="grid gap-5 mt-3 sm:grid-cols-3">
                 <li>
-                  <label class="flex items-center text-sm">
-                    <input type="radio" class="w-6 h-6 border-gray-200" />
-                    <span class="ml-3 font-medium">Undergraduate</span>
+                  <label className="flex items-center text-sm">
+                    <input
+                      type="checkbox"
+                      className="w-6 h-6 border-gray-200"
+                      name=""
+                    />
+                    <span className="ml-3 font-medium">X-Ray</span>
                   </label>
                 </li>
 
                 <li>
-                  <label class="flex items-center text-sm">
+                  <label className="flex items-center text-sm">
                     <input
-                      type="radio"
-                      class="w-6 h-6 border-gray-200"
-                      checked
+                      type="checkbox"
+                      className="w-6 h-6 border-gray-200"
                     />
-                    <span class="ml-3 font-medium">Postgraduate</span>
+                    <span className="ml-3 font-medium ">Ultrasound</span>
+                  </label>
+                </li>
+                <li>
+                  <label className="flex items-center text-sm">
+                    <input
+                      type="checkbox"
+                      className="w-6 h-6 border-gray-200"
+                    />
+                    <span className="ml-3 font-medium">MRI</span>
+                  </label>
+                </li>
+
+                <li>
+                  <label className="flex items-center text-sm">
+                    <input
+                      type="checkbox"
+                      className="w-6 h-6 border-gray-200"
+                    />
+                    <span className="ml-3 font-medium ">Mammogram</span>
+                  </label>
+                </li>
+                <li>
+                  <label className="flex items-center text-sm">
+                    <input
+                      type="checkbox"
+                      className="w-6 h-6 border-gray-200"
+                    />
+                    <span className="ml-3 font-medium">PET Scan</span>
+                  </label>
+                </li>
+
+                <li>
+                  <label className="flex items-center text-sm">
+                    <input
+                      type="checkbox"
+                      className="w-6 h-6 border-gray-200"
+                    />
+                    <span className="ml-3 font-medium ">CT Scan</span>
                   </label>
                 </li>
               </ul>
             </fieldset>
           </div>
 
-          <div class="py-8">
+          <div className="py-5">
             <fieldset>
-              <legend class="text-xl font-medium">Locations</legend>
+              <legend className="text-xl font-medium">Locations</legend>
 
-              <ul class="grid grid-cols-1 gap-4 mt-6 sm:grid-cols-2">
+              <ul className="grid grid-cols-1 gap-2 mt-6 sm:grid-cols-4">
                 <li>
-                  <label class="flex items-center text-sm">
+                  <label className="flex items-center text-sm">
                     <input
+                      name="hospital"
                       type="checkbox"
-                      class="w-6 h-6 border border-gray-200 rounded-md"
+                      className="w-6 h-6 border border-gray-200 rounded-md checked:bg-orange-500"
                     />
-                    <span class="ml-3 font-medium">All Regions</span>
+                    <span className="ml-3 font-medium">Bozeman</span>
                   </label>
                 </li>
 
                 <li>
-                  <label class="flex items-center text-sm">
+                  <label className="flex items-center text-sm">
                     <input
                       type="checkbox"
-                      class="w-6 h-6 border border-gray-200 rounded-md"
+                      className="w-6 h-6 border border-gray-200 rounded-md"
                     />
-                    <span class="ml-3 font-medium">East Midlands</span>
+                    <span className="ml-3 font-medium">Billings</span>
                   </label>
                 </li>
 
                 <li>
-                  <label class="flex items-center text-sm">
+                  <label className="flex items-center text-sm">
                     <input
                       type="checkbox"
-                      class="w-6 h-6 border border-gray-200 rounded-md"
+                      className="w-6 h-6 border border-gray-200 rounded-md"
                     />
-                    <span class="ml-3 font-medium">East of England</span>
+                    <span className="ml-3 font-medium">Butte</span>
                   </label>
                 </li>
 
                 <li>
-                  <label class="flex items-center text-sm">
+                  <label className="flex items-center text-sm">
                     <input
                       type="checkbox"
-                      class="w-6 h-6 border border-gray-200 rounded-md"
+                      className="w-6 h-6 border border-gray-200 rounded-md"
                     />
-                    <span class="ml-3 font-medium">London (Greater)</span>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-          </div>
-
-          <div class="py-8">
-            <fieldset>
-              <legend class="text-xl font-medium">University Rating</legend>
-
-              <ul class="grid grid-cols-1 gap-4 mt-6 sm:grid-cols-2">
-                <li>
-                  <label class="flex items-center text-sm">
-                    <input
-                      type="checkbox"
-                      class="w-6 h-6 border border-gray-200 rounded-md"
-                    />
-                    <span class="ml-3 font-medium">Rated 1+</span>
-                  </label>
-                </li>
-
-                <li>
-                  <label class="flex items-center text-sm">
-                    <input
-                      type="checkbox"
-                      class="w-6 h-6 border border-gray-200 rounded-md"
-                    />
-                    <span class="ml-3 font-medium">Rated 2+</span>
-                  </label>
-                </li>
-
-                <li>
-                  <label class="flex items-center text-sm">
-                    <input
-                      type="checkbox"
-                      class="w-6 h-6 border border-gray-200 rounded-md"
-                    />
-                    <span class="ml-3 font-medium">Rated 3+</span>
-                  </label>
-                </li>
-
-                <li>
-                  <label class="flex items-center text-sm">
-                    <input
-                      type="checkbox"
-                      class="w-6 h-6 border border-gray-200 rounded-md"
-                    />
-                    <span class="ml-3 font-medium">Rated 4+</span>
+                    <span className="ml-3 font-medium">Ennis</span>
                   </label>
                 </li>
               </ul>
             </fieldset>
           </div>
         </div>
-      </main>
-
-      <footer class="flex items-center justify-between p-6">
+      </div>
+      <footer className="flex items-center justify-between p-6 w-1/4 m-auto">
         <button
-          class="text-sm font-medium text-gray-600 underline"
+          className="text-sm font-medium text-gray-600 underline"
           type="button"
         >
           Clear all
         </button>
-
-        <button
-          class="px-5 py-3 font-medium text-white bg-black rounded-lg"
-          type="submit"
-        >
-          Show 300+ results
-        </button>
+        <Link href={"/products-table"}>
+          <button
+            className="px-5 py-3 font-medium text-white bg-orange-500 rounded-lg"
+            type="submit"
+          >
+            Show results
+          </button>
+        </Link>
       </footer>
     </form>
   );

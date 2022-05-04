@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import react, {useState, useEffect} from "react";
-import { useRouter } from "next/router";
 
+
+import { useRef } from "react";
+import { useRouter } from "next/router";
 import {
   BellIcon,
   ChatIcon,
@@ -28,6 +30,15 @@ import NavBarMenu from "./NavBarMenu";
 const Header = () => {
   const [visibility, setVisibility] = useState(false);
   const router = useRouter();
+  const searchInputRef = useRef(null);
+
+  const search = (e) => {
+    e.preventDefault();
+    const term = searchInputRef.current.value;
+    if (!term) return;
+
+    router.push(`/products-table?term=${term}`);
+  };
   return (
     <nav class="md:flex justify-between items-center bg-beige shadow dark:bg-gray-800 shadow-md sticky top-0 z-20">
         
@@ -92,50 +103,6 @@ const Header = () => {
           }
         </div>
     </nav>
-/* <header className="sticky z-50 top-0 bg-white flex items-center p-2 lg:px-5 shadow-md">
-	<div className="container flex justify-between h-16 mx-auto flex items-center">
-		<div className="flex">
-        <Link href="/">
-          <a class="flex-shrink-0" >
-            <Image alt="" src="/icon.png" width={30} height={50} layout="fixed" />
-          </a>
-        </Link>
-        <div className="flex justify-center flex-grow">
-        <div className="flex space-x-6 md:space-x-2">
-          <Link href="/">
-            <a  className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent hover:text-orange-400">
-              <HeaderIcon Icon={HomeIcon} title="Home" />
-            </a>
-          </Link>
-
-          <Link href="/team">
-            <a className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent hover:text-orange-400">
-              <HeaderIcon Icon={UserGroupIcon} title="The Team" />
-            </a>
-          </Link>
-
-          
-          <Link href="/products">
-            <a  className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent hover:text-orange-400">
-              <HeaderIcon Icon={ChevronDoubleDownIcon} title="Services" />
-            </a>
-          </Link>
-        </div>
-      </div>
-		</div>
-		<div className="flex items-center">
-      
-        <div className="flex ml-10 item-center rounded-full bg-grey-100 p-2">
-          <SearchIcon className="h-6 text-grey-500 flex-shrink" />
-          <input
-            className="hidden md:inline-flex flex ml-2 items-center bg-transparent outline-none"
-            type="text"
-            placeholder="Search Services"
-          />
-        </div>
-        </div>
-	</div>
-</header> */
   );
 };
 

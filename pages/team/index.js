@@ -13,6 +13,9 @@ export default function Home({ teamList }) {
 
 export const getServerSideProps = async () => {
   const res = await axios.get("http://localhost:3000/api/team");
+  // const res = await axios.get(
+  //   "https://cranky-banach-68238c.netlify.app/api/team"
+  // );
   return {
     props: {
       teamList: res.data,

@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import axios from "axios";
-import TeamMemberCard from "../../components/TeamCard2";
+import TeamMemberCard from "../../components/TeamMemberCard";
 
 const Team = ({ team }) => {
   return (
@@ -46,6 +46,9 @@ const Team = ({ team }) => {
 
 export const getServerSideProps = async ({ params }) => {
   const res = await axios.get(`http://localhost:3000/api/team/${params.id}`);
+  // const res = await axios.get(
+  //   `https://cranky-banach-68238c.netlify.app/team/${params.id}`
+  // );
   return {
     props: {
       team: res.data,

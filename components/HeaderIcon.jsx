@@ -9,7 +9,9 @@ function HeaderIcon({ Icon, active, title }) {
           active && "text-blue-500"
         }`}
       />
-      <p className="whitespace-nowrap font-semibold p-3 indent-1">{title}</p>
+      <p className="hidden md:flex whitespace-nowrap font-semibold p-3 indent-1 ">
+        {title}
+      </p>
     </div>
   );
 }
