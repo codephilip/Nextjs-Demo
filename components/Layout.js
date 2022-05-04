@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
-import { BasicTable } from "./BasicTable";
 
 const Layout = ({ children }) => (
   <>
@@ -11,7 +10,6 @@ const Layout = ({ children }) => (
     <Header />
     {children}
     <Footer />
-    <BasicTable/>
   </>
 );
 
